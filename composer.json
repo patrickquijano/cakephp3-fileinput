@@ -1,0 +1,24 @@
+{
+    "name": "patrickquijano/cakephp3-fileinput",
+    "description": "FileInput plugin for CakePHP 3",
+    "type": "cakephp-plugin",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "require": {
+        "cakephp/cakephp": "^3.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7.14|^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "FileInput\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "FileInput\\Test\\": "tests/",
+            "Cake\\Test\\": "vendor/cakephp/cakephp/tests/"
+        }
+    }
+}
