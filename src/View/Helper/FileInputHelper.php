@@ -15,20 +15,20 @@ class FileInputHelper extends Helper {
      */
     protected $_defaultConfig = [
         'css' => [
-            'url' => 'https://cdn.jsdelivr.net/npm/bootstrap-fileinput@5.0.7/css/fileinput.min.css',
-            'integrity' => 'sha256-WEL0XoD5/DzQ69EvgrZQdxG+guh5QDEyWT1nhfZO8Ls=',
+            'url' => 'https://cdn.jsdelivr.net/npm/bootstrap-fileinput@5.0.8/css/fileinput.css',
+            'integrity' => 'sha256-iCqKHbQXT4E+PVPuZiebu7TrTkT0bMJVbqfRJxWbTd8=',
         ],
         'script' => [
             [
-                'url' => 'https://cdn.jsdelivr.net/npm/bootstrap-fileinput@5.0.7/js/fileinput.min.js',
-                'integrity' => 'sha256-BzG+1E7cOiOgyJlHA0wFdKMsIJztkpEIvEO3JnrOiXE=',
+                'url' => 'https://cdn.jsdelivr.net/npm/bootstrap-fileinput@5.0.8/js/fileinput.min.js',
+                'integrity' => 'sha256-UuD1KXKQ5hoSAWBOxd2WpsVP9e/bn39NcykluxZ33k8=',
             ],
             [
-                'url' => 'https://cdn.jsdelivr.net/npm/bootstrap-fileinput@5.0.7/themes/fas/theme.min.js',
-                'integrity' => 'sha256-NfS7WQeP0VVBfRdMdjSyrfQusmOLWHXETt6OzHwcrIU=',
+                'url' => 'https://cdn.jsdelivr.net/npm/bootstrap-fileinput@5.0.8/themes/fas/theme.min.js',
+                'integrity' => 'sha256-0Q5imsKUJ5ciBvYv7krt6s1zzfmj0Xk8xR0AYOWfRS4=',
             ],
             [
-                'url' => 'https://cdn.jsdelivr.net/npm/bootstrap-fileinput@5.0.7/js/plugins/piexif.min.js',
+                'url' => 'https://cdn.jsdelivr.net/npm/bootstrap-fileinput@5.0.8/js/plugins/piexif.min.js',
                 'integrity' => 'sha256-WYoKe0uREimiMKk7Z5ocKDhOubCqP3qHxmC4gXcMutk=',
             ],
         ],
@@ -68,10 +68,10 @@ class FileInputHelper extends Helper {
         $options['once'] = true;
         if (Configure::read('debug')) {
             return $this->Html->script([
-                        'FileInput.fileinput.min',
-                        'FileInput.plugins/piexif.min',
-                        'FileInput./themes/fas/theme.min',
-                            ], $options);
+                    'FileInput.fileinput.min',
+                    'FileInput.plugins/piexif.min',
+                    'FileInput./themes/fas/theme.min',
+                    ], $options);
         } else {
             $out = '';
             foreach ($this->getConfig('script') as $script) {
